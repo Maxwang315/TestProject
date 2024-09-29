@@ -1,0 +1,57 @@
+package Review1;
+
+public class CowsAndBulls {
+
+	/*
+	 * You are playing the following Bulls and Cows game with your friend:
+	 * You write a 4-digit secret number and ask your friend to guess it
+	 * Each time your friend guesses a number, you give a hint
+	 * The hint tells your friend how many digits are in the correct position (called "bulls")
+	 * and how many digits are in the wrong positions (called "cows"
+	 * Your friend will use those hints to find out the secret number
+	 * Input:
+	 * 1807
+	 * 7801
+	 * Output:
+	 * 1 bull and 3 cows 
+	 * Explanation:
+	 * 1807 is the secret number
+	 * 7810 is the guess
+	 * The bull is the 8, the other 3 digits are cows
+	 */
+	public static void main(String[] args) {
+		System.out.println(cowBull(1807, 7810));
+		int[] nums = {2, 5, 5, 11};
+		int[] sum = twoSum(nums, 10);
+		for (int i = 0 ; i < sum.length; i++) {
+			System.out.println(sum[i]);
+		}
+	}
+	public static String cowBull(int secret, int guess) {
+		int cowCount = 0; 
+		int bullCount = 0;
+		int a = 3;
+		while (a >= 0) {
+			if (((guess/(10^a))%10^(3-a)) == ((secret/(10^a))&10^(3-a))) {
+				bullCount++;
+			}
+			else {
+				cowCount++;
+			}
+			a--;
+		}
+		return (bullCount + " bulls and " + cowCount + " cows");
+	}
+	public static int[] twoSum(int[] nums, int target) {
+        int[]sum = new int[2];
+        for (int i = 0; i < nums.length-1; i++) {
+            for (int j = 1; j < nums.length; j++) {
+                if ((nums[i] + nums[j]) == target) {
+                    sum[0] = i;
+                    sum[1] = j;
+                }
+            }
+        }
+        return sum;
+    }
+}

@@ -1,0 +1,42 @@
+package Review1;
+
+public class Gambling {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static String count (int money, int a, int b, int c) {
+		int count = 0;
+		int i = 1;
+		while (money > 0) {
+			money--;
+			if (i == 1) {
+				a++;
+				i++;
+			}
+			if (i == 2) {
+				b++;
+				i++;
+			}
+			if (i == 3) {
+				c++;
+				i = 1;
+			}
+			if (a == 35) {
+				a = 0;
+				money += 30;
+			}
+			if (b == 100) {
+				b = 0;
+				money += 60;
+			}
+			if (c == 10) {
+				c = 0;
+				money += 9;
+			}
+			count++;
+		}
+		return "Martha plays " + count + " times before going broke.";
+	}
+}

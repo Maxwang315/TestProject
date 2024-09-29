@@ -1,0 +1,22 @@
+package main;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//System.out.println("Hello World");
+		
+		int age = 10; 
+		double iq = 120.0; 
+		boolean isPersonAlive = true; 
+		String name = "Jack"; 
+		
+		if (age > 18) {
+			if (isPersonAlive == true) {
+				System.out.println("You are smart");	
+				}else if (iq >= 110) {
+					System.out.println("You are also smart");
+				}
+		 
+		}
+	}
+}

@@ -1,0 +1,22 @@
+package main;
+import java.util.Scanner;
+public class H1 {
+
+	public static Scanner sc =  new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Welcome to the chocolate shop, how much would you like to buy?");
+		//int userInput = sc.nextLine();
+		int result = chocolates(5);
+		System.out.println("Your total is " + result);
+	}
+	public static int chocolates(int numberOfChocolates) {
+			return numberOfChocolates * 5;
+		
+	}
+}
+//Homework:
+//Create a process that takes input from user and generate output. Any theme. Games, Flowers, Stores, MCDonalds. 
+//Ask and take input from user and handle possible exceptions with try catch.
+//Output the result.

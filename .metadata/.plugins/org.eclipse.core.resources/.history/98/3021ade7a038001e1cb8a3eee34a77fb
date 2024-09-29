@@ -1,0 +1,87 @@
+package main;
+
+import java.util.ArrayList;
+
+public class ArraysAndLoops {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		int[] numberOfFruits = new int[5];
+//	
+//		String[] numberOfApples = new String[5];
+//		numberOfApples[0] = "1";
+//		numberOfApples[1] = "2";
+//		numberOfApples[2] = "3";
+//		numberOfApples[3] = "4";
+//		numberOfApples[4] = "5";
+//		
+//		numberOfFruits[0] = Integer.parseInt(numberOfApples[0]); 
+//		numberOfFruits[1] = Integer.parseInt(numberOfApples[1]); 
+//		numberOfFruits[2] = Integer.parseInt(numberOfApples[2]); 
+//		numberOfFruits[3] = Integer.parseInt(numberOfApples[3]); 
+//		numberOfFruits[4] = Integer.parseInt(numberOfApples[4]); 
+//		
+//		System.out.println (numberOfFruits[0]);
+//		System.out.println (numberOfFruits[1]);
+//		System.out.println (numberOfFruits[2]);
+//		System.out.println (numberOfFruits[3]);
+//		System.out.println (numberOfFruits[4]);
+//	
+//		int counter = 10;
+//		while (counter > 0) {
+//			counter--;
+//			System.out.println("number is positive");
+//		}
+//		for (int i = 200; i < 801; i += 2) {
+//			System.out.println(i);
+//		}
+//		int[] numbers = new int [100];
+//		for (int i = 100; i < 200; i++) {
+//			numbers[i-100] = i;
+//			System.out.println(numbers[i-100]);
+//		}
+		
+//		for (int i = 11; i < 21; i++) {
+//			int result = i;
+//			System.out.println(result);
+//		}
+		int[] a = new int[10]; 
+		for (int i = 0; i < 10; i++) {
+			a [i] = i;
+		}	
+		int[] b = new int[10]; 
+		for (int i = 0; i < 10; i++) {
+			b[i] = i;
+		}
+		amountOfMoney(a,b);
+//		
+		int[] arr = new int[5];
+		arr[0] = 1;
+		arr[1] = 2;
+		arr[2] = 3;
+		arr[3] = 4;
+		arr[4] = 5;
+	}
+
+		public static void amountOfMoney(int[] arr) {
+			for (int i = 0; i < 10; i++) {
+				System.out.println(arr[i]);
+			}
+		}
+		public static void amountOfMoney(int[] arr1, int[] arr2) {
+			for (int i = 0; i < 10; i++) {
+				System.out.println(arr1[i]);
+				System.out.println(arr2[i]);
+			}
+		}
+		public static void arrayList(int[] arr) {
+			ArrayList<Integer>starterArray = new ArrayList<Integer>();
+			for (int i = 0; i < 5; i++) {
+				starterArray.add(arr[i]);
+				System.out.println(starterArray.get(i));
+				
+			}	
+		}
+				
+}
+

@@ -1,0 +1,42 @@
+package classes;
+
+public class MergeSort {
+
+	public static void main(String[] args) {
+		int[] a = new int[2];
+		a[0] = 22;
+		a[1] = 89;  
+	}
+	
+	public static int[] MergeSort(int[] arr) {
+		// Split to two part
+		// Run MergeSort on both part
+		// Merge the two parts back
+		// Return the merged one array
+	}
+	
+	public static int[] Merge(int[] a, int[] b) {
+		// Merge by looking at the first number of a and b
+		// manage and increment the indexes for indicating each of the first item in a and b
+		int i = 0;
+		int j = 0;
+		int[] merged = new int[a.length + b.length];
+		for (int k = 0; k < merged.length; k++) {
+			if (i > a.length-1) {
+				merged[k] = b[j];
+			}
+			else if (j > b.length-1){
+				merged[k] = a[i]; 
+			}
+			else if (a[i] >= b[j]) {
+				merged[k] = a[i];
+				i++;
+			}
+			else {
+				merged[k] = b[j];
+				j++;
+			}
+		}
+		return merged;
+	}
+}

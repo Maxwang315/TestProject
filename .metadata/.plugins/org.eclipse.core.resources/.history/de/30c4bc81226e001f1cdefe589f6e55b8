@@ -1,0 +1,56 @@
+package Review1;
+import java.util.Scanner;
+
+public class Golf {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int distance = Integer.valueOf(sc.nextLine());
+		int clubs = Integer.valueOf(sc.nextLine());
+		int[] strokes = new int[clubs];
+		for (int i = 0; i < clubs; i++) {
+			clubs[i] = Integer.parseInt(sc.nextLine());
+		}
+	}
+	
+	public void Golf() {
+		  int goal = 100;
+		  int[] clubs = new int[] { 1, 33, 66 };
+		  
+		  int[] dp = new int[goal+1];
+		  
+		  for (int i = 1; i <= goal; i++) {
+		   dp[i] = Integer.MAX_VALUE;
+		  }
+		  
+		  for (int i = 0; i <= goal; i++) {
+		   for (int j = 0; j < clubs.length; j++) {
+		    if (dp[i] != Integer.MAX_VALUE && i + clubs[j] <= goal) {
+		     dp[i + clubs[j]] = Math.min(dp[i + clubs[j]], dp[i] + 1);
+		    }
+		   }
+		  }
+		  
+		  if (dp[goal] == Integer.MAX_VALUE) {
+		   System.out.println("Roberta achknowledges defeat");
+		  } else {
+		   System.out.println("Roberta wins in " + dp[goal] + " strokes.");
+		  }
+		 }
+	public static String golf (int distance, int[] strokes) {
+		int count = 33;
+		for (int a = 0; a < strokes.length; a++) {
+			if (a == distance) {
+				count = 1;
+			}
+		}
+		for (int b1 = 0; b1 < strokes.length-1; b1++) {
+			for (int b2 = 1; b2 < strokes.length; b2++) {
+				if (b1 + b2 == distance) {
+					count = 2;
+				}
+			}
+		}
+	}
+}

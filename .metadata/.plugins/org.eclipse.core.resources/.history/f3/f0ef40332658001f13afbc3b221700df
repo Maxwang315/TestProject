@@ -1,0 +1,31 @@
+package Review1;
+import java.util.Scanner;
+
+public class Golf {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int distance = Integer.valueOf(sc.nextLine());
+		int clubs = Integer.valueOf(sc.nextLine());
+		int[] strokes = new int[clubs];
+		for (int i = 0; i < clubs; i++) {
+			clubs[i] = Integer.valueOf(sc.nextLine());
+		}
+	}
+	public static String golf (int distance, int[] strokes) {
+		int count = 33;
+		for (int a = 0; a < strokes.length; a++) {
+			if (a == distance) {
+				count = 1;
+			}
+		}
+		for (int b1 = 0; b1 < strokes.length-1; b1++) {
+			for (int b2 = 1;b2 < strokes.length; b2++) {
+				if (b1 + b2 == distance) {
+					count = 2;
+				}
+			}
+		}
+	}
+}

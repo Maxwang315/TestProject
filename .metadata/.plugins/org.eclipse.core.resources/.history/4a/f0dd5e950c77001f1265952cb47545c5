@@ -1,0 +1,39 @@
+package J3;
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Harp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		String input = sc.nextLine();
+		ArrayList<String> outputs = new ArrayList<String>();
+		int i = 0;
+		while (i <= input.length()-2) {
+			if (Character.isDigit(input.charAt(i))&&(!Character.isDigit(input.charAt(i+1)))) {
+				outputs.add(input.substring(0, i));
+				input = input.substring(i);
+				i = 0;
+			}
+			else if (i == input.length()-2) {
+				outputs.add(input.substring(0, i));
+			}
+			i++;
+		}
+		for (int k = 0; k < outputs.size(); k++) {
+			if (outputs.get(k).contains("+")) {
+				String[]a  = outputs.get(k).split("+");
+				outputs.set(k, a[0] + "tighten" + a[1]);
+			}
+			else if (outputs.get(k).contains("-")) {
+				String[]a  = outputs.get(k).split("-");
+				outputs.set(k, a[0] + "loosen" + a[1]);
+			}
+		}
+		for (int m = 0; m < outputs.size(); m++) {
+			System.out.println(outputs.get(m));
+		}
+	}
+	
+}

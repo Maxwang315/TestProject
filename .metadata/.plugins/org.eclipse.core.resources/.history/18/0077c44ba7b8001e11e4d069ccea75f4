@@ -1,0 +1,50 @@
+package classes;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class QuickSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			int[] a = new int[] {1,34,5,78,9,65};
+			ArrayList<Integer> arr2 = new ArrayList(Arrays.asList(a));
+			
+			ArrayList<Integer> sortedArr = QuickSort(arr2);
+			
+			for (int i = 0; i < sortedArr.size(); i++) {
+				System.out.println(sortedArr.get(i));
+			}
+	}
+		
+		
+		public static ArrayList<Integer> QuickSort(ArrayList<Integer> arr) {
+			if (arr.size() <= 1) {
+				return arr; 
+			}
+			ArrayList<Integer> front = new ArrayList<Integer>();
+			ArrayList<Integer> back = new ArrayList<Integer>();
+			int pivot = arr.remove(0); 
+			while (arr.size()>0) {
+				int tempNum = arr.remove(0); 
+				if (tempNum <= pivot) {
+					front.add(tempNum);
+				}
+				else {
+					back.add(tempNum);
+				}
+			}
+			front = QuickSort(front);
+			back = QuickSort(back);
+			return Merge(pivot, front, back);
+		}
+		
+		public static ArrayList<Integer> Merge(int pivot, ArrayList<Integer> front, ArrayList<Integer> back) {
+			ArrayList<Integer> sorted = new ArrayList<Integer>();
+			sorted.addAll(front); 
+			sorted.add(pivot); 
+			sorted.addAll(back); 
+			return sorted;
+		}
+}
+

@@ -1,0 +1,28 @@
+package main;
+
+public class chocolateArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Chocolate1[] type = new Chocolate1[5];
+		type[0] = new Chocolate1("milk chocolate");
+		type[1] = new Chocolate1("dark chocolate");
+		type[2] = new Chocolate1("almond chocolate");
+		type[3] = new Chocolate1("orange chocolate");
+		type[4] = new Chocolate1("caramel chocolate");
+		
+		int[] sweetLevel = new int[5];
+		sweetLevel[0] = 5;
+		sweetLevel[0] = 2;
+		sweetLevel[0] = 4;
+		sweetLevel[0] = 3;
+		sweetLevel[0] = 7;
+	}
+	public void chocolateArray(Chocolate1[] type, int[] sweetLevel) {
+		for (int i = 0; i < 5; i++) {
+			System.out.println(type[i]);
+			System.out.println(sweetLevel[i]);
+		}
+	}
+
+}

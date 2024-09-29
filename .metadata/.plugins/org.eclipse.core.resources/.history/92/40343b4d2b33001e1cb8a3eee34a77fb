@@ -1,0 +1,87 @@
+package main;
+
+import java.util.ArrayList;
+
+/**
+ * Main Method 
+ * @author Max
+ */
+public class Main {
+/**
+ * String Method 
+ * @param args input
+ */
+	public static void main(String[] args) {
+	
+		int result = sum(sum(15,16), sum(12,13));
+		System.out.println(result);
+		int result1 = largest(30,3,299);
+		System.out.println(result1);
+		boolean result2 = isEven(3);
+		String result3 = info("Bobby","Sunday");
+		System.out.println(result3);
+		int result4 = year(2007, 2024);
+		System.out.println(result4);
+		
+		Chocolate c1 = new Chocolate(5, "brown", "milk chocolate");
+		shirt s1 = new shirt();
+		c1.SpillOnShirt(s1);
+		
+		ArrayList<Chocolate1> chocolateArrayList = new ArrayList<Chocolate1>();
+			for (int i = 0; i < 20; i++) {
+				chocolateArrayList.add(new Chocolate1("milk chocolate" + i , i));
+			}
+			for (int i = 0; i < chocolateArrayList.size(); i++) {
+				System.out.println(chocolateArrayList.get(i).type);
+			}
+	}
+	/**
+	 * Method for adding two numbers 
+	 * @param a first number 
+	 * @param b second number
+	 * @return sum
+	 */
+	 
+	
+	public static int sum(int a, int b) {
+		return a + b;
+	}
+	/**
+	 * Method for finding the largest number 
+	 * @param e first number
+	 * @param f second number 
+	 * @param g third number 
+	 * @return largest number 
+	 */
+	public static int largest(int e, int f, int g) {
+		if(e >= f&&e >= g)
+			return e;
+		else if(f >= e&&f >= g)
+			return f;
+		else
+			return g;
+		}
+	/**
+	 * Method for finding even numbers 
+	 * @param h number 
+	 * @return if number is even 
+	 */
+	public static boolean isEven(int h) {
+		if(h % 2 == 0) {
+			System.out.println("interger is even");
+			return true; 
+		}
+		else {
+			System.out.println("interger is odd");
+			return false; 
+		}
+		
+	}
+	public static String info(String name, String date) {
+		return ("Hello " + name +", "+ "today is " + date);
+	}
+	public static int year(int birthyear, int currentyear) {
+		return currentyear - birthyear;
+	}
+	
+} 

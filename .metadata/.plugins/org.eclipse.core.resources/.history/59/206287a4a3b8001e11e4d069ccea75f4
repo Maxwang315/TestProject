@@ -1,0 +1,65 @@
+package classes;
+
+public class MergeSort {
+
+	public static void main(String[] args) {
+		int[] a = new int[2];
+		a[0] = 22;
+		a[1] = 89;  
+		
+		int[] b = new int [2];
+		b[0] = 1;
+		b[1] = 67;
+		
+		int[] c = Merge(a, b);
+		
+		for (int i = 0; i < 4; i++) {
+			System.out.println(c[i]);
+		}
+		
+	}
+	
+	public static int[] MergeSort(int[] arr, int start, int end) {
+		// Split to two part
+		// Run MergeSort on both part
+		// Merge the two parts back
+		// Return the merged one array
+		if (arr.length == 1 ) {
+			return arr; 
+		}
+		int midIndex = (start + end)/2;
+		int[] front = new int[midIndex - start + 1];
+		int[] back = new int[end - midIndex];
+		for (int i = 0; i < front.length; i++) {
+			front[i] = arr[i + start];
+		}
+		for (int i = 0; i < back.length; i++) {
+			back[i] = arr[i + midIndex + 1]; 
+		}
+	}
+	
+	public static int[] Merge(int[] a, int[] b) {
+		// Merge by looking at the first number of a and b
+		// manage and increment the indexes for indicating each of the first item in a and b
+		int i = 0;
+		int j = 0;
+		int[] merged = new int[a.length + b.length];
+		for (int k = 0; k < merged.length; k++) {
+			if (i > a.length-1) {
+				merged[k] = b[j];
+			}
+			else if (j > b.length-1){
+				merged[k] = a[i]; 
+			}
+			else if (a[i] <= b[j]) {
+				merged[k] = a[i];
+				i++;
+			}
+			else {
+				merged[k] = b[j];
+				j++;
+			}
+		}
+		return merged;
+	}
+}

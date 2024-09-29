@@ -1,0 +1,27 @@
+package main;
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		int dogAge = 5; 
+		dogAge++;
+		System.out.println(dogAge); 
+		double catAge = 5.55;
+		catAge-=4; 
+		System.out.println(catAge); 
+		float babyAge = 3.1f; 
+		babyAge = babyAge + 1; 
+		System.out.println(babyAge); 
+		boolean isDogHappy = true; 
+		isDogHappy = false; 
+		System.out.println(isDogHappy); 
+		String dogName = "April"; 
+		dogName = "May";
+		System.out.println(dogName); 
+		float y = 6f; 
+		float x = 4f; 
+		
+	}
+
+}

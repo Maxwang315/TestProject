@@ -1,0 +1,11 @@
+package main;
+
+public class Chocolate1 {
+	
+	String type = "chocolate";
+	
+	public Chocolate1(String type) {
+		this.type = type;
+	}
+
+}

@@ -1,0 +1,25 @@
+package Review1;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+public class Hashmap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/* Basic Functions*/
+		/* Hashmap does not retain order, for that use a LinkedHashMap, to receive a order based on integer value or alphabet, use treemap*/
+		HashMap<String, Integer> mcdPriceTable = new HashMap<String, Integer>();
+		  mcdPriceTable.put("Burger", 5);
+		  mcdPriceTable.put("Fries", 3);
+		  mcdPriceTable.remove("BigMac");
+		  System.out.println(mcdPriceTable.remove("Fries"));
+		  System.out.println(mcdPriceTable.get("Burger"));
+		  System.out.println(mcdPriceTable.size());
+		  
+		  for (Map.Entry<String, Integer> entry : mcdPriceTable.entrySet()) {
+		   System.out.println(entry.getKey());
+		   System.out.println(entry.getValue());
+		  }
+	}
+	
+}

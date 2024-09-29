@@ -1,0 +1,18 @@
+package classes;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Dog one = new Dog("April", 6, "white");
+		Dog two = new Dog("April", 6, "white");
+		System.out.println(one.equals(two));
+
+		Bird three = new Bird("April", 6, 10);
+		Bird four = new Bird("April", 6, 10);
+		System.out.println(three.equals(four));
+	
+	
+	}
+}

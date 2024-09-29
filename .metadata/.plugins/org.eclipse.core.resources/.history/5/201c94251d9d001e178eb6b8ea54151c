@@ -1,0 +1,49 @@
+package classes;
+import java.util.List;
+import java.util.ArrayList;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Dog one = new Dog("April", 6, "white");
+		Dog two = new Dog("April", 6, "white");
+		System.out.println(one.equals(two));
+
+		System.out.println(one);
+		String[]words = new String[4];
+		words[0] = "aaa";
+		words[1] = "aa";
+		words[2] = "a";
+		words[3] = "aaa";
+		
+		System.out.println(wordsWithoutList(words, 3));
+		
+		System.out.println(128%(128/12));
+	}
+		
+	public static List wordsWithoutList(String[] words, int len) {
+		ArrayList<String> words1 = new ArrayList<String>();
+		for (String word : words) {
+			if (word.length() != len) {
+				words1.add(word);
+			}
+		}
+		return words1;
+	}
+	public boolean dividesSelf(int n) {
+		if (n <= 9) {
+			if(n/n==0) {
+				return true;
+			}
+			return false;
+		}
+		if (n%(n/10) == 0) {
+			return dividesSelf(n/10);
+		}
+		else 
+			return false;
+	}
+	
+}

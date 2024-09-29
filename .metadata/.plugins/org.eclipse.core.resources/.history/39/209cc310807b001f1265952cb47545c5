@@ -1,0 +1,17 @@
+package J3;
+import java.util.Scanner;
+
+public class coldCompress {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int lines = Integer.valueOf(sc.nextLine());
+		int i = 0;
+		while (i < lines) {
+			String a = sc.nextLine();
+			
+		}
+	}
+
+}

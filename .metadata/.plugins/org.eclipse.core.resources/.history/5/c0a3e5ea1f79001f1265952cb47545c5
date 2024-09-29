@@ -1,0 +1,22 @@
+package Review1;
+
+import java.util.regex.*;
+
+public class regularExpressions {
+
+	public static void main(String[] args) {
+		// example@gmail.com
+		String email = "example@gmail.com";
+		
+		String regex = "example";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(email);
+		
+		if (matcher.matches()) {
+			System.out.println("Matched");
+		} else {
+			System.out.println("Not matching");
+		}
+	}
+
+}

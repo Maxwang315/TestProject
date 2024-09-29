@@ -1,0 +1,13 @@
+package main;
+
+public class Chocolate1 {
+	
+	String type = "chocolate";
+	int sweetLevel = 0;
+	
+	public Chocolate1(String type, int sweetLevel) {
+		this.type = type;
+		this.sweetLevel = sweetLevel;
+	}
+
+}
